@@ -4,16 +4,22 @@
         <!-- <div class="home">home</div>
         <router-link to="/list" class="home">列表页</router-link> -->
         <home-header></home-header>
+        <home-swiper></home-swiper>
+        <div>test</div>
+
     </div>
 
 </template>
 <script>
 import HomeHeader from './Head.vue'
+import HomeSwiper from './Swiper.vue'
     export default
     {
         name:'Home',
         components:{
-            HomeHeader
+            //注册组件
+            HomeHeader,
+            HomeSwiper
         }
     }
 </script>
