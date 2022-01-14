@@ -3,11 +3,8 @@
         <!-- <swiper :options="swiperOption" :not-next-tick="notNextTick" ref="mySwiper"> -->
         <swiper :options="swiperOption">
         <!-- slides -->
-        <swiper-slide class="swiper-img">
-            <img src="//imgs.qunarzz.com/vs_ceph_vcimg/5be2601d1f921f166646b817459a2727.jpeg" alt="想去哪儿 就去哪儿">
-        </swiper-slide>
-        <swiper-slide class="swiper-img">
-            <img src="//imgs.qunarzz.com/vs_ceph_vcimg/280673be5655fc91ce24ba605c62fe07.jpeg" alt="">
+        <swiper-slide v-for="item of swiperList" :key="item.id">
+            <img class="swiper-img" :src="item.imgUrl" alt="想去哪儿 就去哪儿">
         </swiper-slide>
         <!-- <swiper-slide>I'm Slide 3</swiper-slide>
         <swiper-slide>I'm Slide 4</swiper-slide>
@@ -27,15 +24,23 @@
 </template>
 <script>
     export default{
-        name: HomeSwiper,
+        name: 'HomeSwiper',
         //子组件 里面定义data 必须是一个函数
         data()
         {
             return {
                 swiperOption: {
-                    pagination: '.swiper-pagination'
+                    pagination: '.swiper-pagination',
+                    loop: true
                 },
-
+                swiperList: [{
+                    id:'0001',
+                    imgUrl:'http://imgs.qunarzz.com/vs_ceph_vcimg/5be2601d1f921f166646b817459a2727.jpeg'
+                },
+                {
+                    id:'0002',
+                    imgUrl:'http://imgs.qunarzz.com/vs_ceph_vcimg/280673be5655fc91ce24ba605c62fe07.jpeg'
+                }]
             }
         }
     }    
@@ -44,6 +49,7 @@
 //swiper-pagination-bullet-active 在 swiper-slide 这个组件内 受scoped 影响 这个样式只能在该组件内生效  
 // 需要>>>进行样式穿透  将子组件的样式也受影响
 .wrapper >>> .swiper-pagination-bullet-active
+    background: #fff
 .wrapper
     overflow: hidden
     width: 100%
@@ -51,6 +57,7 @@
     // 自适应 宽高比
     padding-bottom: 31.25%
     height: 0
+    background: #eee
     .swiper-img 
         width : 100%
 
