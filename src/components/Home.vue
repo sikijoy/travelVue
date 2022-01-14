@@ -5,7 +5,8 @@
         <router-link to="/list" class="home">列表页</router-link> -->
         <home-header></home-header>
         <home-swiper></home-swiper>
-        <div>test</div>
+        <home-icons></home-icons>
+        <!-- <div>test</div> -->
 
     </div>
 
@@ -13,13 +14,16 @@
 <script>
 import HomeHeader from './Head.vue'
 import HomeSwiper from './Swiper.vue'
+import HomeIcons from './Icons.vue'
+
     export default
     {
         name:'Home',
         components:{
             //注册组件
             HomeHeader,
-            HomeSwiper
+            HomeSwiper,
+            HomeIcons
         }
     }
 </script>
