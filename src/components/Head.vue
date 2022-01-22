@@ -21,7 +21,7 @@
 </script>
 <style lang="stylus" scoped>
 //样式里面引入样式 需要在import 前加import @import
-@import '../../public/css/varibles.styl';
+@import '../../public/css/styles/varibles.styl';
 .header
     display: flex
     line-height: .86rem
