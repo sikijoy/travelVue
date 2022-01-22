@@ -6,6 +6,7 @@
         <home-header></home-header>
         <home-swiper></home-swiper>
         <home-icons></home-icons>
+        <home-recommend></home-recommend>
         <!-- <div>test</div> -->
 
     </div>
@@ -15,6 +16,7 @@
 import HomeHeader from './Head.vue'
 import HomeSwiper from './Swiper.vue'
 import HomeIcons from './Icons.vue'
+import HomeRecommend from './Recommend.vue'
 
     export default
     {
@@ -23,7 +25,8 @@ import HomeIcons from './Icons.vue'
             //注册组件
             HomeHeader,
             HomeSwiper,
-            HomeIcons
+            HomeIcons,
+            HomeRecommend
         }
     }
 </script>

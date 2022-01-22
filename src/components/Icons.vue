@@ -90,11 +90,11 @@
 <style lang = "stylus" scoped>
 @import '../../public/css/styles/varibles.styl';
 @import '../../public/css/styles/mixins.styl';
-
-.icons
-    overflow: hidden
+.icons>>> .swiper-container
     height: 0
     padding-bottom: 50%
+.icons
+    margin-top: .1rem
     /* background-color: green  */
     .icon
         position relative
